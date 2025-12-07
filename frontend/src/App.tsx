@@ -6,6 +6,7 @@ import IncidentList from './pages/IncidentList';
 import CreateIncident from './pages/CreateIncident';
 import EditIncident from './pages/EditIncident';
 import IncidentDetail from './pages/IncidentDetail';
+import { AIChat } from './pages/AIChat';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/create" element={<CreateIncident />} />
           <Route path="/incidents/:id" element={<IncidentDetail />} />
           <Route path="/incidents/:id/edit" element={<EditIncident />} />
+          <Route path="/ai-chat" element={<AIChat />} />
         </Routes>
       </Layout>
     </BrowserRouter>

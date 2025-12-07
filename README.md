@@ -9,6 +9,7 @@ A full-stack incident management application built with React 18 (Rsbuild/TypeSc
 - **Update Incidents**: Edit existing incidents
 - **Delete Incidents**: Remove incidents from the system
 - **View Details**: See detailed information about each incident
+- **AI Assistant**: 🤖 Chat with an AI agent that can create, list, update, and delete incidents using natural language
 - **Dark Mode**: Toggle between light and dark themes
 - **Responsive Design**: Works on desktop and mobile devices
 
@@ -57,7 +58,19 @@ cd backend
 npm install
 ```
 
-3. Start the development server:
+3. Configure environment variables:
+   - Copy `env.template` to `.env`:
+     ```bash
+     # On Windows (PowerShell)
+     Copy-Item env.template .env
+     
+     # On Mac/Linux
+     cp env.template .env
+     ```
+   - Edit the `.env` file and replace `your_openai_api_key_here` with your actual OpenAI API key
+   - Get your API key from: https://platform.openai.com/api-keys
+
+4. Start the development server:
 ```bash
 npm run dev
 ```
@@ -85,11 +98,17 @@ The frontend will run on `http://localhost:3000` (or the next available port)
 
 ## API Endpoints
 
+### Incident Management
 - `GET /api/incidents` - List all incidents (supports query params: status, severity, environment, search)
 - `GET /api/incidents/:id` - Get single incident by ID
 - `POST /api/incidents` - Create new incident
 - `PUT /api/incidents/:id` - Update existing incident
 - `DELETE /api/incidents/:id` - Delete incident
+
+### AI Assistant
+- `POST /api/chat` - Send a message to the AI assistant
+  - Request body: `{ messages: [{ role: 'user' | 'assistant', content: string }] }`
+  - Response: `{ message: string, functionCalls?: [...] }`
 
 ## Incident Model
 
@@ -105,6 +124,34 @@ The frontend will run on `http://localhost:3000` (or the next available port)
   updatedAt: string (ISO timestamp)
 }
 ```
+
+## AI Assistant Usage
+
+The AI Assistant allows you to manage incidents using natural language. Simply navigate to the "AI Assistant" page and chat with the bot. Here are some example commands:
+
+**Creating Incidents:**
+- "Create a critical incident for database connection issues in production"
+- "Add a new incident: API timeout in staging, high severity, reported by DevOps team"
+
+**Listing Incidents:**
+- "Show me all critical incidents"
+- "List all open incidents in production"
+- "What incidents are currently in progress?"
+
+**Viewing Details:**
+- "Show me details for incident [ID]"
+- "Get information about the database incident"
+
+**Updating Incidents:**
+- "Mark incident [ID] as resolved"
+- "Change the severity of incident [ID] to low"
+- "Update incident [ID] status to in progress"
+
+**Deleting Incidents:**
+- "Delete incident [ID]"
+- "Remove the test incident"
+
+The AI will ask for any missing required information and confirm actions before executing them.
 
 ## Data Storage
 

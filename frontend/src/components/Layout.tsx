@@ -44,6 +44,13 @@ export default function Layout({ children }: LayoutProps) {
             <span className="nav-icon">➕</span>
             <span>Create Incident</span>
           </Link>
+          <Link
+            to="/ai-chat"
+            className={`nav-link ${isActive('/ai-chat') ? 'active' : ''}`}
+          >
+            <span className="nav-icon">🤖</span>
+            <span>AI Assistant</span>
+          </Link>
         </nav>
         <div className="sidebar-footer">
           <button

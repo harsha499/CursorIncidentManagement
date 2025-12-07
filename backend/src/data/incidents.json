@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "1371818d-3753-4d5b-8d3f-55f789912d39",
+    "teamName": "Mosaic Team",
+    "issueDescription": "Mosaic is not able to launch",
+    "severity": "High",
+    "environment": "Testing",
+    "status": "Open",
+    "createdAt": "2025-12-07T12:32:30.336Z",
+    "updatedAt": "2025-12-07T12:32:30.336Z"
+  }
+]
