@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { Incident, CreateIncidentDto, UpdateIncidentDto, IncidentFilters } from '../types/incident';
+import { config } from '../config';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = config.apiUrl;
 
 const api = axios.create({
   baseURL: API_BASE_URL,

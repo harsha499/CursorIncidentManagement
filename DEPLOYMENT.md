@@ -59,13 +59,13 @@ app.use(cors({
 
 ### Frontend API Configuration
 
-The frontend is configured to call the backend at:
+The frontend is configured to call the backend directly at:
 - **Production**: https://cursorincidentmanagementsystem.onrender.com/api
 - **Local Dev**: http://localhost:3001/api
 
 This is set in:
 - `frontend/src/config.ts`
-- `frontend/rsbuild.config.ts`
+- `frontend/rsbuild.config.ts` (via `__API_URL__` environment variable)
 
 ## 📝 Environment Variables
 
