@@ -39,12 +39,18 @@ incident-management/
 └── README.md
 ```
 
+## 🌐 Live Demo
+
+- **Frontend**: https://cursorincidentmanagement.onrender.com
+- **Backend API**: https://cursorincidentmanagementsystem.onrender.com
+
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (v18 or higher)
 - npm or yarn
+- OpenAI API Key (for AI Assistant feature)
 
 ### Backend Setup
 
