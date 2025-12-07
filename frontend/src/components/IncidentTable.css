@@ -1,0 +1,158 @@
+.table-container {
+  overflow-x: auto;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.incident-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.incident-table thead {
+  background-color: var(--bg-tertiary);
+}
+
+.incident-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.incident-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.team-name {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.description {
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+.date {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.severity-critical {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--critical-color);
+}
+
+.badge.severity-high {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: var(--high-color);
+}
+
+.badge.severity-medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--medium-color);
+}
+
+.badge.severity-low {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--low-color);
+}
+
+.badge.severity-info {
+  background-color: rgba(107, 114, 128, 0.1);
+  color: var(--info-color);
+}
+
+.badge.status-open {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.badge.status-in-progress {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary-color);
+}
+
+.badge.status-resolved {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.btn-edit,
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-edit:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.btn-delete:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .incident-table {
+    font-size: 0.8rem;
+  }
+
+  .incident-table th,
+  .incident-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .description {
+    max-width: 150px;
+  }
+}
+
