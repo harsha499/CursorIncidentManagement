@@ -9,8 +9,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: process.env.VITE_API_URL?.replace('/api', '') || 'https://cursorincidentmanagementsystem.onrender.com',
         changeOrigin: true,
+        secure: true,
       },
     },
   },
@@ -21,7 +22,7 @@ export default defineConfig({
     // Define environment variables that will be available in the client code
     define: {
       __API_URL__: JSON.stringify(
-        process.env.VITE_API_URL || 'http://localhost:3001/api'
+        process.env.VITE_API_URL || 'https://cursorincidentmanagementsystem.onrender.com/api'
       ),
     },
   },

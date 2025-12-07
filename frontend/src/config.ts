@@ -4,6 +4,6 @@
 declare const __API_URL__: string;
 
 export const config = {
-  apiUrl: typeof __API_URL__ !== 'undefined' ? __API_URL__ : 'http://localhost:3001/api',
+  apiUrl: typeof __API_URL__ !== 'undefined' ? __API_URL__ : 'https://cursorincidentmanagementsystem.onrender.com/api',
 };
 
