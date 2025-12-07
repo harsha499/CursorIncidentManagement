@@ -24,6 +24,5 @@ app.get('/api/health', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`OpenAI API Key configured: ${process.env.OPENAI_API_KEY ? '✅ Yes' : '❌ No'}`);
 });
 

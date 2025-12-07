@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const incidentController_1 = require("../controllers/incidentController");
+const router = (0, express_1.Router)();
+router.get('/', incidentController_1.IncidentController.getAllIncidents);
+router.get('/:id', incidentController_1.IncidentController.getIncidentById);
+router.post('/', incidentController_1.IncidentController.createIncident);
+router.put('/:id', incidentController_1.IncidentController.updateIncident);
+router.delete('/:id', incidentController_1.IncidentController.deleteIncident);
+exports.default = router;
