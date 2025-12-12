@@ -13,7 +13,7 @@ export default defineConfig({
     // Define environment variables that will be available in the client code
     define: {
       __API_URL__: JSON.stringify(
-        process.env.VITE_API_URL || 'https://cursorincidentmanagementsystem.onrender.com/api'
+        process.env.VITE_API_URL || 'https://genieimsserver.onrender.com/api'
       ),
     },
   },
