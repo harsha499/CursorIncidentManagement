@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware - CORS configuration
 app.use((0, cors_1.default)({
     origin: [
-        'https://cursorincidentmanagement.onrender.com', // Production frontend
+        'https://genieims.onrender.com', // Production frontend
         'http://localhost:3000', // Local development
         'http://localhost:3001', // Local API testing
     ],
