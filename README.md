@@ -42,7 +42,7 @@ incident-management/
 ## 🌐 Live Demo
 
 - **Frontend**: https://cursorincidentmanagement.onrender.com
-- **Backend API**: https://cursorincidentmanagementsystem.onrender.com
+- **Backend API**: https://genieimsserver.onrender.com
 
 ## Getting Started
 

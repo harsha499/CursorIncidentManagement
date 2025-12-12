@@ -5,7 +5,7 @@ This project is deployed on Render with two separate services:
 ## 🌐 Live URLs
 
 - **Frontend (Website)**: https://cursorincidentmanagement.onrender.com
-- **Backend (API Server)**: https://cursorincidentmanagementsystem.onrender.com
+- **Backend (API Server)**: https://genieimsserver.onrender.com
 
 ## 📋 Architecture
 
@@ -16,7 +16,7 @@ https://cursorincidentmanagement.onrender.com (React Frontend)
     ↓
     ↓ API Calls
     ↓
-https://cursorincidentmanagementsystem.onrender.com/api (Node.js Backend)
+https://genieimsserver.onrender.com/api (Node.js Backend)
     ↓
 JSON File Storage (incidents.json)
 ```
@@ -25,7 +25,7 @@ JSON File Storage (incidents.json)
 
 ### Backend Deployment (Already Done ✅)
 
-1. **Service**: https://cursorincidentmanagementsystem.onrender.com
+1. **Service**: https://genieimsserver.onrender.com
 2. **Type**: Web Service
 3. **Build Command**: `npm install && npm run build`
 4. **Start Command**: `npm start`
@@ -40,7 +40,7 @@ JSON File Storage (incidents.json)
 3. **Build Command**: `cd frontend && npm install && npm run build`
 4. **Publish Directory**: `frontend/dist`
 5. **Environment Variables**:
-   - `VITE_API_URL`: https://cursorincidentmanagementsystem.onrender.com/api
+   - `VITE_API_URL`: https://genieimsserver.onrender.com/api
 
 ## 🔧 Configuration
 
@@ -60,7 +60,7 @@ app.use(cors({
 ### Frontend API Configuration
 
 The frontend is configured to call the backend directly at:
-- **Production**: https://cursorincidentmanagementsystem.onrender.com/api
+- **Production**: https://genieimsserver.onrender.com/api
 - **Local Dev**: http://localhost:3001/api
 
 This is set in:
@@ -77,7 +77,7 @@ PORT=3001
 
 ### Frontend (Render Environment Variables)
 ```env
-VITE_API_URL=https://cursorincidentmanagementsystem.onrender.com/api
+VITE_API_URL=https://genieimsserver.onrender.com/api
 ```
 
 ## 🔄 Update Deployment
@@ -104,7 +104,7 @@ Render will rebuild and deploy automatically.
 
 ### Test Backend
 ```bash
-curl https://cursorincidentmanagementsystem.onrender.com/api/health
+curl https://genieimsserver.onrender.com/api/health
 # Should return: {"status":"ok","message":"Server is running"}
 ```
 
@@ -131,7 +131,7 @@ Visit: https://cursorincidentmanagement.onrender.com
 ## 📊 Monitoring
 
 Check service status:
-- Backend: https://cursorincidentmanagementsystem.onrender.com/api/health
+- Backend: https://genieimsserver.onrender.com/api/health
 - Frontend: https://cursorincidentmanagement.onrender.com
 
 ## 💰 Cost Optimization
